@@ -60,7 +60,7 @@ npm ERR! Missing script: "build"
 Había olvidado incluir en el package.json el script "build": "parcel build". Añadiéndolo, solucioné el problema.
 
 BROWSERLIST
-He realizado un estudio sobre los navegadores que podrán soportar mi web. Mi objetivo principal con este estudio, es que la web llegue a un porcentaje de usuarios aproximado del 90-95%. Para la realización de este estudio, me he servido del comando "npx autoprefixer --info", el cual proporciona información sobre los navegadores soportados y el porcentaje de público objetivo. Todas las queries realizadas en browserslist, al estar separadas por una coma ',' corresponden a la operación OR.
+Browserslist puede ser configurado a nivel del package.json o mediante el archivo .browserslist. Yo he decidido añadir la configuración al package.json, puesto que me resulta más claro tener la información ahí y al ser una única línea, no aumenta demasiado el tamaño del .json. He realizado un estudio sobre los navegadores que podrán soportar mi web. Mi objetivo principal con este estudio, es que la web llegue a un porcentaje de usuarios aproximado del 90-95%. Para la realización de este estudio, me he servido del comando "npx autoprefixer --info", el cual proporciona información sobre los navegadores soportados y el porcentaje de público objetivo. Todas las queries realizadas en browserslist, al estar separadas por una coma ',' corresponden a la operación OR.
 
 //Últimas dos versiones de todos los navegadores del mercado.
 "browserslist": "last 2 versions"
@@ -116,7 +116,7 @@ A continuación he instalado rimraf y npm-run-all mediante el comando "npm insta
 }
 
 PREPROCESADORES DE CÓDIGO
-Los navegadores únicamente entienden HTML, CSS y JS, por tanto, si utilizamos otros lenguajes, como por ejemplo TypeScript (para JS) o Saas (para CSS), tenemos que usar una herramienta que "traduzca" estos lenguajes para que sean comprensibles para el navegador. En el caso de esta PEC, usaré Babel y PostCSS, los cuales ya vienen instalados con Parcel y son los recomendados por la asignatura. Al realizar las actividades del módulo m2 de la asignatura, podemos observar cómo se han añadido las dependencias de Autoprefixer y postCSS. Además, he añadido el plugin Tailwindcss, mediante la creación del archivo ".postcssrc" y la inclusión del plugin como se indica a continuación:
+Los navegadores únicamente entienden HTML, CSS y JS, por tanto, si utilizamos otros lenguajes, como por ejemplo TypeScript (para JS) o Saas (para CSS), tenemos que usar una herramienta que "traduzca" estos lenguajes para que sean comprensibles para el navegador. En el caso de esta PEC, usaré Babel y PostCSS, los cuales ya vienen instalados con Parcel y son los recomendados por la asignatura. Al realizar las actividades del módulo m2 de la asignatura, podemos observar cómo se han añadido las dependencias de Autoprefixer y postCSS.
 
 //package.json
 "devDependencies": {
@@ -126,7 +126,9 @@ Los navegadores únicamente entienden HTML, CSS y JS, por tanto, si utilizamos o
     "postcss": "^8.4.12",
     "rimraf": "^3.0.2",
     "tailwindcss": "^3.0.23"
-  }
+}
+
+Además, he añadido el plugin Tailwindcss, mediante la creación del archivo ".postcssrc" y la inclusión del plugin en dicho archivo. Tailwindcss permite escanear archivos HTML y componentes JS y crea el código CSS mediante la lectura de clases en el código.
 
 //.postcssrc
 {
@@ -134,3 +136,6 @@ Los navegadores únicamente entienden HTML, CSS y JS, por tanto, si utilizamos o
     "tailwindcss": true
   }
 }
+
+GIT
+En la configuración de GIT, encontré un problema de permisos al intentar hacer push del código. Mi cuenta github no está configurada con SSH, si no con HTTPS, y por error, había configurado el origin remoto a la URL SSH. Cambié el origin a la URL HTTPS, GIT me pidió las credenciales de mi cuenta mediante consola y a continuación pude hacer correctamente el push del código. 
