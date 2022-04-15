@@ -138,4 +138,5 @@ Además, he añadido el plugin Tailwindcss, mediante la creación del archivo ".
 }
 
 GIT
-En la configuración de GIT, encontré un problema de permisos al intentar hacer push del código. Mi cuenta github no está configurada con SSH, si no con HTTPS, y por error, había configurado el origin remoto a la URL SSH. Cambié el origin a la URL HTTPS, GIT me pidió las credenciales de mi cuenta mediante consola y a continuación pude hacer correctamente el push del código. 
+En la configuración de GIT, encontré un problema de permisos al intentar hacer push del código. Mi cuenta github no está configurada con SSH, si no con HTTPS, y por error, había configurado el origin remoto con la URL SSH. Cambié el origin a la URL HTTPS, GIT me pidió las credenciales de mi cuenta mediante consola y a continuación pude hacer correctamente el push del código.
+

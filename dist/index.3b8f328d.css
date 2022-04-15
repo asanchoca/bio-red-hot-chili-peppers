@@ -1,6 +1,6 @@
 * {
-  color: #8B0000;
-  font-family: 'Alegreya';
+  color: #8b0000;
+  font-family: Alegreya;
 }
 
 header {
@@ -13,45 +13,43 @@ a {
 }
 
 .divFlex {
-  display: flex;
-  flex-wrap: wrap;
   width: 90%;
   height: 100%;
+  flex-wrap: wrap;
   margin: auto;
+  display: flex;
 }
 
 .photoHeaderPortada {
-  background-image: url("../../img/cover-rhcp.jpg");
-  background-repeat:no-repeat;
-  background-position: center;
-  background-origin:padding-box;
-  background-size:100%;
   height: 30vh;
-  color: white;
+  color: #fff;
   width: unset;
+  background-image: url("cover-rhcp.fc554d41.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-origin: padding-box;
 }
 
 .parent {
-  margin: auto;
-  margin-bottom: 10px;
-  border: #8B0000 2px solid;
   width: 40%;
   height: 100%;
   text-align: center;
+  border: 2px solid #8b0000;
+  margin: auto auto 10px;
 }
 
 .child {
   width: 84%;
   height: 100%;
-  background-color: #ed9292b1; 
+  background-color: #ed9292b1;
   background-position: center;
   background-size: 100%;
   padding: 8%;
 }
 
-.parent:hover .child,
-.parent:focus .child {
-transform: scale(1.2);
+.parent:hover .child, .parent:focus .child {
+  transform: scale(1.2);
 }
 
 .content80width {
@@ -60,9 +58,9 @@ transform: scale(1.2);
 }
 
 .planesContainer {
-  display: grid;
-  grid-template-columns: 0.75fr 2.5fr 0.75fr;
+  grid-template-columns: .75fr 2.5fr .75fr;
   gap: 20px;
+  display: grid;
 }
 
 .divBack {
@@ -73,59 +71,61 @@ transform: scale(1.2);
 .planesContainer div img {
   max-width: 100%;
   max-height: 100%;
-  display: block;
   margin: auto;
+  display: block;
   position: static;
 }
 
 .centeredImg {
-  display: flex;
   justify-content: center;
+  display: flex;
 }
 
 figure {
-  text-align: right ;
-  font-size: smaller;
-  margin-right: 10px;
+  text-align: right;
   margin-bottom: 5%;
+  margin-right: 10px;
+  font-size: smaller;
 }
 
 figure blockquote {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 iframe {
-  display: block;
-  margin: auto;
-  border: none;
   max-width: 100%;
+  border: none;
+  margin: auto;
+  display: block;
 }
 
 article img, figcaption {
   width: 50%;
   height: 50%;
-  display: block;
   margin: auto;
+  display: block;
 }
 
 figcaption {
-  display: block;
   margin: auto;
+  display: block;
 }
 
 #portadaFigcaption {
-  margin-right: 0px;
-  text-align: right ;
+  text-align: right;
+  margin-right: 0;
 }
 
 footer {
-  background-color: #ed9292b1;
-  color: #8B0000;
+  color: #8b0000;
   text-align: center;
-  font-family: 'Open Sans';
-  padding: 10px;
-  margin-top: 4em;
-  display: grid;
+  background-color: #ed9292b1;
   grid-template-columns: 1fr;
   gap: 20px;
+  margin-top: 4em;
+  padding: 10px;
+  font-family: Open Sans;
+  display: grid;
 }
+
+/*# sourceMappingURL=index.3b8f328d.css.map */
